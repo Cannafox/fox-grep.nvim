@@ -12,7 +12,7 @@ function M.setup(opts)
   opts = opts or defaults
 
   if opts.verbose then
-    M.logger = require("logger").init("lua/fox-grep/init.lua")
+    M.logger = require("fox-grep").logger.init("lua/fox-grep/init.lua")
   end
 
   vim.keymap.set("n", "fox", function()
