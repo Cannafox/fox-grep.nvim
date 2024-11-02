@@ -1,7 +1,7 @@
 local M = {}
 
 function M.get_project_root_path()
-  return vim.fn.getcwd()
+  return vim.loop.cwd()
 end
 
 return M
