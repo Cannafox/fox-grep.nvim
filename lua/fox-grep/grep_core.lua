@@ -9,6 +9,10 @@ M.defaults = {
   }
 }
 
+function M.print_current_directory()
+  print(require("fox-grep.utils.utils").get_current_path())
+end
+
 function M.setup(opts)
   opts = opts or M.defaults
 
