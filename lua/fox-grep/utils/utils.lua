@@ -1,6 +1,6 @@
 local M = {}
 
-function M.get_project_root_path()
+function M.get_current_path()
   return vim.loop.cwd()
 end
 
