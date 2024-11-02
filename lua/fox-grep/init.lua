@@ -1,5 +1,3 @@
-local logger = require("logger")
-
 --- Plugin defaults
 local defaults = {
   opts = {
