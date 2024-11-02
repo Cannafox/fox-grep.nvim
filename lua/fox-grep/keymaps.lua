@@ -1,7 +1,9 @@
+local utils = require("fox-grep.utils.utils")
+
 local M = {}
 
 M.default = {
-  {"n", "foxr", function() print("root") end},
+  {"n", "foxr", utils.get_project_root_path()},
 }
 
 function M.setup(opts)
@@ -14,7 +16,7 @@ function M.setup(opts)
 
   for _, keymap in ipairs(M.default) do
     if opts.verbose then
-      M.logger.print(string.format("Mode: %s Key: %s", keymap[1], keymap[2]))
+      M.logger.print(string.format("Setting: Mode: %s Key: %s", keymap[1], keymap[2]))
     end
     vim.keymap.set(unpack(keymap))
   end
