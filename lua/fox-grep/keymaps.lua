@@ -14,7 +14,7 @@ function M.setup(opts)
 
   for _, keymap in ipairs(M.default) do
     if opts.verbose then
-      M.logger.print(string.format("Mode: %s Key: %s", keymap[0], keymap[1]))
+      M.logger.print(string.format("Mode: %s Key: %s", keymap[1], keymap[2]))
     end
     vim.keymap.set(unpack(keymap))
   end
