@@ -1,8 +1,6 @@
-local utils = require("fox-grep.utils.utils")
-
 local M = {}
 
-function M.setup(opts)
+function M.setup(opts, keymap)
   opts = opts or {}
 
   if opts.verbose then
@@ -10,7 +8,7 @@ function M.setup(opts)
     M.logger.init("lua/fox-grep/keymaps.lua")
   end
 
-  for _, keymap in ipairs(opts.default) do
+  for _, keymap in ipairs(keymap) do
     if opts.verbose then
       M.logger.print(string.format("Setting: Mode: %s Key: %s", keymap[1], keymap[2]))
     end

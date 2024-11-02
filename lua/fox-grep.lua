@@ -11,13 +11,13 @@ function M.setup(opts)
     M.logger = require("fox-grep.utils.logger").init("lua/fox-grep.lua")
   end
 
-  opts.default = {
-    {"n", "foxc", core.print_current_directory()},
+  local default_keymaps = {
+    {"n", "foxc", core.print_current_directory()}
     -- {"n", "foxg", core.grep_current_directory()},
   }
 
   core.setup(opts)
-  keymaps.setup(opts)
+  keymaps.setup(opts, default_keymaps)
 end
 
 return M
