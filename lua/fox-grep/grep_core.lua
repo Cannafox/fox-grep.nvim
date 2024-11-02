@@ -11,9 +11,9 @@ local M = {}
 function M.setup(opts)
   opts = opts or defaults
 
-  if opts.verbose then
-    M.logger = logger.init("lua/fox-grep/init.lua")
-  end
+  -- if opts.verbose then
+  --   M.logger = logger.init("lua/fox-grep/init.lua")
+  -- end
 
   vim.keymap.set("n", "fox", function()
     print("Hi!")
