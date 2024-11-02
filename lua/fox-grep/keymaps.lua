@@ -3,7 +3,7 @@ local utils = require("fox-grep.utils.utils")
 local M = {}
 
 M.default = {
-  {"n", "foxr", utils.get_project_root_path()},
+  {"n", "foxr", function() print(utils.get_project_root_path()) end},
 }
 
 function M.setup(opts)
