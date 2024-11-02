@@ -3,7 +3,7 @@ local utils = require("fox-grep.utils.utils")
 local M = {}
 
 M.default = {
-  {"n", "foxr", function() print(utils.get_project_root_path()) end},
+  {"n", "foxr", function() vim.notify(utils.get_current_path()) end},
 }
 
 function M.setup(opts)
