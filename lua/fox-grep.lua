@@ -10,14 +10,14 @@ function M.setup(opts)
   if opts.verbose then
     M.logger = require("fox-grep.utils.logger").init("lua/fox-grep.lua")
   end
-  core.setup(opts)
 
   opts.default = {
     {"n", "foxc", core.print_current_directory()},
     -- {"n", "foxg", core.grep_current_directory()},
   }
-  keymaps.setup(opts)
 
+  core.setup(opts)
+  keymaps.setup(opts)
 end
 
 return M
