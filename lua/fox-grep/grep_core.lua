@@ -15,10 +15,6 @@ function M.setup(opts)
   if opts.verbose then
     M.logger = require("fox-grep.utils.logger").init("lua/fox-grep/grep_core.lua")
   end
-
-  vim.keymap.set("n", "fox", function()
-    print("Hi!")
-  end)
 end
 
 return M

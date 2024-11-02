@@ -8,6 +8,8 @@ function M.setup(opts)
     M.logger = require("fox-grep.utils.logger").init("lua/fox-grep.lua")
   end
   local core = require("fox-grep.grep_core").setup(opts)
+  local keymaps = require("fox-grep.keymaps").setup(opts)
+
 end
 
 return M
