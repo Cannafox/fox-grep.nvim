@@ -1,3 +1,6 @@
+local core = require("fox-grep.grep_core")
+local keymaps = require("fox-grep.keymaps")
+
 local M = {}
 
 ---@param opts table
@@ -7,13 +10,13 @@ function M.setup(opts)
   if opts.verbose then
     M.logger = require("fox-grep.utils.logger").init("lua/fox-grep.lua")
   end
-  local core = require("fox-grep.grep_core").setup(opts)
+  core.setup(opts)
 
   opts.default = {
     {"n", "foxc", core.print_current_directory()},
     -- {"n", "foxg", core.grep_current_directory()},
   }
-  local keymaps = require("fox-grep.keymaps").setup(opts)
+  keymaps.setup(opts)
 
 end
 
